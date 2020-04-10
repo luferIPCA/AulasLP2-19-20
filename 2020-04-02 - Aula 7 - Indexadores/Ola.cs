@@ -1,10 +1,14 @@
 ﻿//
 // lufer
 //
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
 
-namespace Aula_5___Static
+namespace AulaHoje
 {
-    public class Socios
+    public class Ola
     {
         #region Member Variables
         #endregion
@@ -14,7 +18,7 @@ namespace Aula_5___Static
         /// <summary>
         /// The default Constructor.
         /// </summary>
-        public Socios()
+        public Ola()
         {
         }
 

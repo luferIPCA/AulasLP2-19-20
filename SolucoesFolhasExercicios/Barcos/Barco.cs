@@ -1,12 +1,17 @@
 ﻿//
 // lufer
 //
+using System;
 
-namespace Aula_5___Static
+namespace Fornecedor
 {
-    public class Socios
+    public class Barco
     {
         #region Member Variables
+        public int codBarco;
+        public string nome;
+        public DateTime data;
+
         #endregion
 
         #region Constructors
@@ -14,7 +19,7 @@ namespace Aula_5___Static
         /// <summary>
         /// The default Constructor.
         /// </summary>
-        public Socios()
+        public Barco()
         {
         }
 

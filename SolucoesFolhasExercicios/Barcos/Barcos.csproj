@@ -4,16 +4,16 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>{3F84D249-87B6-4259-9613-183308AFDC7E}</ProjectGuid>
-    <OutputType>Exe</OutputType>
-    <RootNamespace>Aula_5___Static</RootNamespace>
-    <AssemblyName>Aula 5 - Static</AssemblyName>
-    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
+    <ProjectGuid>{482F31C7-1939-4FCF-A630-F0B5AFE7D05D}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>Barcos</RootNamespace>
+    <AssemblyName>Barcos</AssemblyName>
+    <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <Deterministic>true</Deterministic>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
-    <PlatformTarget>AnyCPU</PlatformTarget>
     <DebugSymbols>true</DebugSymbols>
     <DebugType>full</DebugType>
     <Optimize>false</Optimize>
@@ -23,7 +23,6 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
-    <PlatformTarget>AnyCPU</PlatformTarget>
     <DebugType>pdbonly</DebugType>
     <Optimize>true</Optimize>
     <OutputPath>bin\Release\</OutputPath>
@@ -42,21 +41,9 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Carro.cs" />
-    <Compile Include="CarrosII.cs" />
-    <Compile Include="Carros.cs" />
-    <Compile Include="Clube.cs" />
-    <Compile Include="ContaBancaria.cs" />
-    <Compile Include="Pessoa.cs" />
-    <Compile Include="Gestao.cs" />
-    <Compile Include="Pessoas.cs" />
+    <Compile Include="Barco.cs" />
+    <Compile Include="Barcos.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="Socio.cs" />
-    <Compile Include="Socios.cs" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="App.config" />
-    <None Include="DiagramaClasses_1.cd" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

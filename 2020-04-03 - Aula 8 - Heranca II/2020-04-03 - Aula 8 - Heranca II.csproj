@@ -4,16 +4,16 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>{3F84D249-87B6-4259-9613-183308AFDC7E}</ProjectGuid>
-    <OutputType>Exe</OutputType>
-    <RootNamespace>Aula_5___Static</RootNamespace>
-    <AssemblyName>Aula 5 - Static</AssemblyName>
+    <ProjectGuid>{2CDF6D71-281F-48E2-81FF-35D3EAF4778B}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>HerancaLib</RootNamespace>
+    <AssemblyName>HerancaLib</AssemblyName>
     <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <Deterministic>true</Deterministic>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
-    <PlatformTarget>AnyCPU</PlatformTarget>
     <DebugSymbols>true</DebugSymbols>
     <DebugType>full</DebugType>
     <Optimize>false</Optimize>
@@ -23,7 +23,6 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
-    <PlatformTarget>AnyCPU</PlatformTarget>
     <DebugType>pdbonly</DebugType>
     <Optimize>true</Optimize>
     <OutputPath>bin\Release\</OutputPath>
@@ -42,21 +41,19 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Abstract.cs" />
     <Compile Include="Carro.cs" />
-    <Compile Include="CarrosII.cs" />
-    <Compile Include="Carros.cs" />
-    <Compile Include="Clube.cs" />
-    <Compile Include="ContaBancaria.cs" />
-    <Compile Include="Pessoa.cs" />
-    <Compile Include="Gestao.cs" />
-    <Compile Include="Pessoas.cs" />
+    <Compile Include="Enfermeiro.cs" />
+    <Compile Include="Medico.cs" />
+    <Compile Include="Speaker.cs" />
+    <Compile Include="Person.cs" />
+    <Compile Include="ProfSaude.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="Socio.cs" />
-    <Compile Include="Socios.cs" />
+    <Compile Include="TesteInternal.cs" />
+    <Compile Include="Veiculo.cs" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="App.config" />
-    <None Include="DiagramaClasses_1.cd" />
+    <None Include="ClassDiagram1.cd" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

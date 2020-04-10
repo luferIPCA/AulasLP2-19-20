@@ -3,6 +3,8 @@
 // Descreve um Carro
 //
 
+using System;
+
 namespace Aula_5___Static
 {
     public class Carro
@@ -47,6 +49,43 @@ namespace Aula_5___Static
         #endregion
 
         #region Enums
+        #endregion
+
+        #region Overrides
+
+        public override string ToString()
+        {
+            return "Matricula: " + matricula;
+        }
+
+
+        /// <summary>
+        /// Compare dois Carros
+        /// </summary>
+        /// <param name="obj"></param>
+        /// <returns></returns>
+        public override bool Equals(object obj)
+        {
+            Carro aux = (Carro)obj;
+            return (String.Compare(aux.matricula,this.matricula)==0);
+        }
+
+
+
+        #endregion
+
+        #region Operadores
+        public static bool operator ==(Carro c1, Carro c2)
+        {
+            return (c1.Equals(c2));
+        }
+
+        public static bool operator !=(Carro c1, Carro c2)
+        {
+            //return (!c1.Equals(c2));
+            return (!(c1==c2));
+        }
+
         #endregion
     }
 }

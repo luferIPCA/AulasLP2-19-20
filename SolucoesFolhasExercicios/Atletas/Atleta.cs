@@ -2,11 +2,13 @@
 // lufer
 //
 
-namespace Aula_5___Static
+namespace Atletas
 {
-    public class Socios
+    public class Atleta : Pessoa
     {
         #region Member Variables
+        public string numFederado;
+        public string modalidade;
         #endregion
 
         #region Constructors
@@ -14,7 +16,7 @@ namespace Aula_5___Static
         /// <summary>
         /// The default Constructor.
         /// </summary>
-        public Socios()
+        public Atleta()
         {
         }
 

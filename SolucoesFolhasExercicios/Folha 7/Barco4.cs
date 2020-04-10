@@ -1,12 +1,15 @@
 ﻿//
 // lufer
 //
+using Fornecedor;
+using Atletas;
 
-namespace Aula_5___Static
+namespace Folha7
 {
-    public class Socios
+    public class Barco4 : Barco
     {
         #region Member Variables
+        Remador[] remadores;
         #endregion
 
         #region Constructors
@@ -14,7 +17,7 @@ namespace Aula_5___Static
         /// <summary>
         /// The default Constructor.
         /// </summary>
-        public Socios()
+        public Barco4()
         {
         }
 

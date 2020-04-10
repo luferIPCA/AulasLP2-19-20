@@ -2,11 +2,12 @@
 // lufer
 //
 
-namespace Aula_5___Static
+namespace Atletas
 {
-    public class Socios
+    public class Remador : Atleta
     {
         #region Member Variables
+        int posBarco;        //posição barco: proa | esquerdo | direito | etc...
         #endregion
 
         #region Constructors
@@ -14,7 +15,7 @@ namespace Aula_5___Static
         /// <summary>
         /// The default Constructor.
         /// </summary>
-        public Socios()
+        public Remador()
         {
         }
 

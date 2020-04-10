@@ -59,8 +59,9 @@ namespace LibExterna
         /// </summary>
         /// <param name="obj"></param>
         /// <returns></returns>
+        public override bool Equals(object obj)
         {
-            return ((this.nome == ((Pessoa)obj).nome) && (this.idade == ((Pessoa)obj).idade));
+             return ((this.nome == ((Pessoa)obj).nome) && (this.idade == ((Pessoa)obj).idade));
         }
 
         /// <summary>

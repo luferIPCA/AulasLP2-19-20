@@ -21,6 +21,29 @@ namespace Aula_5___Static
     {
         static void Main(string[] args)
         {
+            #region USO_INDEXADORES
+
+            Pessoas pes = new Pessoas();
+
+            Pessoa p1 = new Pessoa("Joao", 12);
+
+            int xxx= Pessoa.InserePessoa(p1);
+
+            pes[10] = p1;
+
+            Console.WriteLine("Pessoa: " + pes[10].ToString());     //Indexador por posição
+
+            Console.WriteLine("Pessoa: " + Pessoas.GetPessoa(10));  //Metodo static
+
+            pes[0] = new Pessoa(12, "ola");     //Indexador
+
+            //pes["Joao"] = p1;
+
+            Console.WriteLine("Pessoa: " + pes["Joao"].ToString()); //Indexador por nome
+
+            #endregion
+
+
             #region DadosNoMain
 
             //H1: Estrutura de dados publica, no Main!!!
@@ -77,6 +100,7 @@ namespace Aula_5___Static
                 Console.WriteLine("A mesma pessoa");
             }
             #endregion
+
             #endregion
 
             #region Nullable_Arrays
@@ -103,6 +127,11 @@ namespace Aula_5___Static
             #region VARIAS_GARAGENS
 
             Carro c1 = new Carro("asad");
+            Carro c2 = new Carro("asad1");
+
+            Console.WriteLine("C1 == C2 : " + c1.Equals(c2));
+
+            Console.WriteLine(c1.ToString());
 
             Carros garagemShopping = new Carros();      // garagem para 100 carros
 

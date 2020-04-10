@@ -2,11 +2,13 @@
 // lufer
 //
 
-namespace Aula_5___Static
+namespace Folha7
 {
-    public class Socios
+    public class Remador : Pessoa
     {
         #region Member Variables
+        int numFederado;
+        string nome;
         #endregion
 
         #region Constructors
@@ -14,7 +16,7 @@ namespace Aula_5___Static
         /// <summary>
         /// The default Constructor.
         /// </summary>
-        public Socios()
+        public Remador()
         {
         }
 

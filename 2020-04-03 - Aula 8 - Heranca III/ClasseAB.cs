@@ -2,11 +2,15 @@
 // lufer
 //
 
-namespace Aula_5___Static
+namespace Aula8
 {
-    public class Socios
+    public class ClasseAB
     {
         #region Member Variables
+        int idade;
+        string nome;
+        int ano;
+        string morada;
         #endregion
 
         #region Constructors
@@ -14,7 +18,7 @@ namespace Aula_5___Static
         /// <summary>
         /// The default Constructor.
         /// </summary>
-        public Socios()
+        public ClasseAB()
         {
         }
 

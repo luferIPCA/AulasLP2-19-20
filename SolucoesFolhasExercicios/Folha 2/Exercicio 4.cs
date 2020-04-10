@@ -1,10 +1,19 @@
 ﻿//
 // lufer
 //
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
 
-namespace Aula_5___Static
+namespace Folha2
 {
-    public class Socios
+    public struct Pessoa
+    {
+        public int idade;
+        public string nome;
+    }
+    public class Exercicio_4
     {
         #region Member Variables
         #endregion
@@ -14,7 +23,7 @@ namespace Aula_5___Static
         /// <summary>
         /// The default Constructor.
         /// </summary>
-        public Socios()
+        public Exercicio_4()
         {
         }
 
@@ -28,5 +37,7 @@ namespace Aula_5___Static
 
         #region Enums
         #endregion
+
+        
     }
 }

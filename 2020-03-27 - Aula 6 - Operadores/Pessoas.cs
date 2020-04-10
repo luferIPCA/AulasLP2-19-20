@@ -9,6 +9,8 @@
 // <desc>Overloading de Operadores</desc>
 //-----------------------------------------------------------------------
 
+using System.Collections;
+
 namespace LibExterna
 {
 
@@ -37,6 +39,7 @@ namespace LibExterna
         }
         #endregion
 
+        #region GenericMethods
         /// <summary>
         /// Registar uma nova pessoa
         /// </summary>
@@ -83,6 +86,48 @@ namespace LibExterna
             }
             return null;
         }
+
+        /// <summary>
+        /// Procura se determinada pessoa existe
+        /// </summary>
+        /// <param name="id">Nome da pessoa</param>
+        /// <returns>Ficha da Pessoa</returns>
+        public static Pessoa GetPessoa(string nome)
+        {
+            for (int i = 0; i < totPessoas; i++)
+            {
+                if (ps[i].Nome == nome) return ps[i];
+            }
+            return null;
+        }
+        #endregion
+
+        #region Indexers
+
+        /// <summary>
+        /// Indexador por posição
+        /// </summary>
+        /// <param name="i"></param>
+        /// <returns></returns>
+        public Pessoa this[int i]
+        {
+            get { return ps[i]; }
+            set { ps[i] = value; totPessoas++; }
+        }
+
+        /// <summary>
+        /// Indexer por conteúdo, neste caso pelo nome
+        /// </summary>
+        /// <param name="nome"></param>
+        /// <returns></returns>
+        public Pessoa this[string nome]
+        {
+            get { return GetPessoa(nome); }
+            //set { ps[i] = value; totPessoas++; }
+        }
+
+
+        #endregion
 
         #endregion
 

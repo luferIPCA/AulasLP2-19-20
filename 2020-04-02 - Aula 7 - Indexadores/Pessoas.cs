@@ -13,7 +13,7 @@
         }
 -------------------------------------------------*/
 
-namespace Aula_5___Static
+namespace Revisoes
 {
     enum RES
     {
@@ -56,8 +56,8 @@ namespace Aula_5___Static
         /// <returns></returns>
         public Pessoa this[int i]
         {
-            get { return pess[i]; }
-            set { pess[i] = value; numPess++; }     //Validações
+            get { if (i<MAX) return pess[i]; return null; }
+            set { if (i<MAX) pess[i] = value; numPess++; }     //Validações
         }
 
         /// <summary>
@@ -134,7 +134,7 @@ namespace Aula_5___Static
         {
             for (int i = 0; i < numPess; i++)
             {
-                if (pess[i].Idade == id) return pess[i];
+                if (pess[i]!=null && pess[i].Idade == id) return pess[i];
             }
             return null;
         }
@@ -148,7 +148,7 @@ namespace Aula_5___Static
         {
             for (int i = 0; i < numPess; i++)
             {
-                if (pess[i].Nome.CompareTo(nome) == 0)
+                if (pess[i]!=null && pess[i].Nome.CompareTo(nome) == 0)
                 {
                     return pess[i];
                 }
