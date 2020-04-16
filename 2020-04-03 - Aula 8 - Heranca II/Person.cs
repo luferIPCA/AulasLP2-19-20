@@ -1,12 +1,14 @@
 ﻿/*
  * lufer
  * */
-
 namespace HerancaLib
 {
     /// <summary>
     /// Descreve uma pessoa....
     /// </summary>
+    /// <remarks>Remarks...</remarks>
+    /// <example>Exemplo</example>
+    /// <see cref="Carro"/>
     public class Person
     {
         string name;
