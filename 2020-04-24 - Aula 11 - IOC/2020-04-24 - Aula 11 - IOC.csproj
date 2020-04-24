@@ -4,10 +4,10 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>{C7AF65D9-ADE7-44F1-A954-98C8CF44DF23}</ProjectGuid>
+    <ProjectGuid>{2EE79660-593F-4523-8E9D-6D62A12A625E}</ProjectGuid>
     <OutputType>Exe</OutputType>
-    <RootNamespace>Folha_7</RootNamespace>
-    <AssemblyName>Folha 7</AssemblyName>
+    <RootNamespace>_2020_04_24___Aula_11___IOC</RootNamespace>
+    <AssemblyName>2020-04-24 - Aula 11 - IOC</AssemblyName>
     <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
@@ -33,13 +33,6 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
-    <Reference Include="Atletas">
-      <HintPath>..\SolucoesFolhasExercicios\Atletas\bin\Debug\Atletas.dll</HintPath>
-    </Reference>
-    <Reference Include="Barcos, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
-      <SpecificVersion>False</SpecificVersion>
-      <HintPath>..\SolucoesFolhasExercicios\Barcos\bin\Debug\Barcos.dll</HintPath>
-    </Reference>
     <Reference Include="System" />
     <Reference Include="System.Core" />
     <Reference Include="System.Xml.Linq" />
@@ -50,20 +43,12 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Barco4.cs" />
-    <Compile Include="Barco8.cs" />
-    <Compile Include="Biblioteca.cs" />
-    <Compile Include="Medico.cs" />
-    <Compile Include="ClasseB.cs" />
-    <Compile Include="ClasseA.cs" />
-    <Compile Include="ClasseAB.cs" />
+    <Compile Include="Company.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="User.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
-    <None Include="ClassDiagram1.cd" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

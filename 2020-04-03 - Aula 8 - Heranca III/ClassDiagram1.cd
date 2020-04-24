@@ -1,40 +1,130 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <ClassDiagram MajorVersion="1" MinorVersion="1">
-  <Class Name="Folha7.Barco4">
-    <Position X="2" Y="3.75" Width="1.5" />
+  <Class Name="Aula8.Barco4">
+    <Position X="5" Y="3" Width="1.5" />
     <TypeIdentifier>
       <HashCode>AAAAAAAAAAAAAAAAAAAAAAACAAAAAAAAAAAAAAAAAAA=</HashCode>
       <FileName>Barco4.cs</FileName>
     </TypeIdentifier>
-    <ShowAsAssociation>
-      <Field Name="remadores" />
-    </ShowAsAssociation>
   </Class>
-  <Class Name="Folha7.Barco8">
-    <Position X="4.75" Y="3.75" Width="1.5" />
+  <Class Name="Aula8.ClasseA">
+    <Position X="2.75" Y="3" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAgAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>ClasseA.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Aula8.ClasseAB">
+    <Position X="1.75" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AQAAACAAABAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAgA=</HashCode>
+      <FileName>ClasseAB.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Aula8.ClasseB">
+    <Position X="0.5" Y="3" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>QAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAEAAAAAAAAA=</HashCode>
+      <FileName>ClasseB.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Aula8.ClassBB">
+    <Position X="0.5" Y="5.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAABAAAAAAAA=</HashCode>
+      <FileName>ClasseB.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Aula8.Program" Collapsed="true">
+    <Position X="9.25" Y="1" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAABAAAAAA=</HashCode>
+      <FileName>Program.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Fornecedor.Barco">
+    <Position X="6" Y="0.5" Width="1.5" />
+    <TypeIdentifier />
+  </Class>
+  <Class Name="Aula8.Barco8">
+    <Position X="7.25" Y="3" Width="1.5" />
     <TypeIdentifier>
       <HashCode>AAAAAAAAAAAAAAAAAAAAAIAAAAAAAAAAAAAAAAAAAAA=</HashCode>
       <FileName>Barco8.cs</FileName>
     </TypeIdentifier>
+  </Class>
+  <Class Name="Aula8.Pessoa">
+    <Position X="9.25" Y="3.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AQAAAAAAABAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Medico.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Aula8.Medico">
+    <Position X="10.5" Y="6.5" Width="1.5" />
+    <AssociationLine Name="area" Type="Aula8.Especialidade">
+      <MemberNameLabel ManuallyPlaced="true">
+        <Position X="0.113" Y="0.067" />
+      </MemberNameLabel>
+    </AssociationLine>
+    <TypeIdentifier>
+      <HashCode>AAAAAABAAAAAAAAAAAAAAAAAAEAAAAAAAAAAAQAAAAE=</HashCode>
+      <FileName>Medico.cs</FileName>
+    </TypeIdentifier>
     <ShowAsAssociation>
-      <Field Name="timoneiro" />
+      <Field Name="area" />
+    </ShowAsAssociation>
+    <ShowAsCollectionAssociation>
+      <Field Name="doentes" />
+    </ShowAsCollectionAssociation>
+  </Class>
+  <Class Name="Aula8.Infetado">
+    <Position X="7.5" Y="6.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAEAAAAAAAAAACAAAQAhCAEAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Medico.cs</FileName>
+    </TypeIdentifier>
+    <ShowAsCollectionAssociation>
+      <Field Name="doencas" />
+    </ShowAsCollectionAssociation>
+  </Class>
+  <Class Name="Aula8.Infecao">
+    <Position X="5.25" Y="6.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AQAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Medico.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Aula8.Doente">
+    <Position X="11.5" Y="1" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAIAAAAAAAAAAAAAACAAAAAAAAAQAAAAA=</HashCode>
+      <FileName>Medico.cs</FileName>
+    </TypeIdentifier>
+    <ShowAsAssociation>
+      <Field Name="processoClinico" />
     </ShowAsAssociation>
   </Class>
-  <Class Name="Atletas.Remador" Collapsed="true">
-    <Position X="2" Y="0.75" Width="1.5" />
-    <TypeIdentifier />
+  <Class Name="Aula8.Hospital">
+    <Position X="14" Y="2.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AQAAAAAAAAAAAAAAAAAAAAAAAAACAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Medico.cs</FileName>
+    </TypeIdentifier>
   </Class>
-  <Class Name="Atletas.Atleta" Collapsed="true">
-    <Position X="4.5" Y="0.75" Width="1.5" />
-    <TypeIdentifier />
+  <Class Name="Aula8.EpisodioClinico">
+    <Position X="12.75" Y="4" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAEAAAAAAAAAA=</HashCode>
+      <FileName>Medico.cs</FileName>
+    </TypeIdentifier>
   </Class>
-  <Class Name="Atletas.Pessoa">
-    <Position X="7.25" Y="0.5" Width="1.5" />
-    <TypeIdentifier />
-  </Class>
-  <Class Name="Fornecedor.Barco" Collapsed="true">
-    <Position X="3.5" Y="2.25" Width="1.5" />
-    <TypeIdentifier />
-  </Class>
+  <Enum Name="Aula8.Especialidade">
+    <Position X="12.5" Y="6.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAgAAAAAIAAAIAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Medico.cs</FileName>
+    </TypeIdentifier>
+  </Enum>
   <Font Name="Segoe UI" Size="9" />
 </ClassDiagram>

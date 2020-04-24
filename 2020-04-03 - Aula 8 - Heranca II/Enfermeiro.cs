@@ -52,6 +52,11 @@ namespace HerancaLib
         {
             return base.ToString() + "Pancada=" + especialidade;
         }
+
+        public new bool X()
+        {
+            return false;
+        }
     }
 }
 

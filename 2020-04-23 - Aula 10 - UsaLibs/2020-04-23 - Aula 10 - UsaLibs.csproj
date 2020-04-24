@@ -4,13 +4,12 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>{C7AF65D9-ADE7-44F1-A954-98C8CF44DF23}</ProjectGuid>
+    <ProjectGuid>{AD57EBCE-CCBD-4090-B946-449228ACFCE1}</ProjectGuid>
     <OutputType>Exe</OutputType>
-    <RootNamespace>Folha_7</RootNamespace>
-    <AssemblyName>Folha 7</AssemblyName>
-    <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
+    <RootNamespace>Calculadora</RootNamespace>
+    <AssemblyName>Calculadora</AssemblyName>
+    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
-    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
     <Deterministic>true</Deterministic>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
@@ -33,13 +32,6 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
-    <Reference Include="Atletas">
-      <HintPath>..\SolucoesFolhasExercicios\Atletas\bin\Debug\Atletas.dll</HintPath>
-    </Reference>
-    <Reference Include="Barcos, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
-      <SpecificVersion>False</SpecificVersion>
-      <HintPath>..\SolucoesFolhasExercicios\Barcos\bin\Debug\Barcos.dll</HintPath>
-    </Reference>
     <Reference Include="System" />
     <Reference Include="System.Core" />
     <Reference Include="System.Xml.Linq" />
@@ -50,20 +42,21 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Barco4.cs" />
-    <Compile Include="Barco8.cs" />
-    <Compile Include="Biblioteca.cs" />
-    <Compile Include="Medico.cs" />
-    <Compile Include="ClasseB.cs" />
-    <Compile Include="ClasseA.cs" />
-    <Compile Include="ClasseAB.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="User.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
-    <None Include="ClassDiagram1.cd" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\2020-04-03 - Aula 8 - Heranca II\2020-04-03 - Aula 8 - Heranca II - Library.csproj">
+      <Project>{2cdf6d71-281f-48e2-81ff-35d3eaf4778b}</Project>
+      <Name>2020-04-03 - Aula 8 - Heranca II - Library</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\2020-04-23 - Aula 10 - InterfacesLib\2020-04-23 - Aula 10 - InterfacesLib.csproj">
+      <Project>{5f255f7a-63c1-4994-bcf9-48acbf9afa7c}</Project>
+      <Name>2020-04-23 - Aula 10 - InterfacesLib</Name>
+    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

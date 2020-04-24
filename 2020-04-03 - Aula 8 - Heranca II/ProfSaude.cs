@@ -42,5 +42,10 @@ namespace HerancaLib
 
             return base.ToString()+ "Ola";
         }
+
+        public bool X()
+        {
+            return true;
+        }
     }
 }
