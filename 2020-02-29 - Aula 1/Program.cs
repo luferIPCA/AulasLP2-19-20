@@ -28,7 +28,31 @@ namespace _2020_02_29___Aula_1
         /// <param name="args"></param>
         static void Main(string[] args)
         {
-           
+
+            #region DUVIDA_ALUNO_ARRAYS
+            int tot = 0;
+            Pessoa[] pes = new Pessoa[10];
+
+            //pes[0].idade = 12;
+            //pes[0].nome = "ola";
+            Pessoa p1 = new Pessoa("ola", 12);
+
+            pes[tot++] = p1;
+
+            pes[tot++] = p1;
+
+            p1.idade = 40;
+
+            tot = AddArray(p1, pes, tot);
+
+            tot = AddArrayII(p1, pes, tot);
+
+            p1.idade = 25;
+
+            Console.ReadKey();
+
+            #endregion
+
             #region TiposDeDados
             int x =3;
             double y=3.7;
@@ -217,6 +241,32 @@ namespace _2020_02_29___Aula_1
 
             #endregion
 
+        }
+
+        public static int AddArray(Pessoa p, Pessoa[] ps, int tot)
+        {
+            ps[tot] = p;
+            return tot+1;
+        }
+
+        public static int AddArrayII(Pessoa p, Pessoa[] ps, int tot)
+        {
+            Pessoa aux = new Pessoa(p.nome, p.idade);
+            //aux = p;
+            ps[tot] = aux;
+            return tot + 1;
+        }
+    }
+
+    public class Pessoa
+    {
+        public int idade;
+        public string nome;
+
+        public Pessoa(string n, int u)
+        {
+            idade = u;
+            nome = n;
         }
     }
 }
