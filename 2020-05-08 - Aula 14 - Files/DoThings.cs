@@ -75,8 +75,7 @@ namespace FilesAndFolders
                 }
             }
             else
-            {
-                
+            { 
                 StreamWriter sw = File.CreateText(fileName);
                 sw.WriteLine(t);
                 sw.Flush();

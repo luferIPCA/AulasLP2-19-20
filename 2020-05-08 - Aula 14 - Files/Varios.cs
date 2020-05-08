@@ -65,9 +65,13 @@ namespace FilesAndFolders
         }
         public bool AddColmeia(Colmeia c)
         {
-            //testar...
-            apiario.Add(c);
-            return true;
+            //testar se ainda não existe
+            if (!apiario.Contains(c))
+            {
+                apiario.Add(c);
+                return true;
+            }
+            return false;
         }
 
         /// <summary>
@@ -77,19 +81,22 @@ namespace FilesAndFolders
         /// <returns></returns>
         public  bool SaveApiario(string fileName)
         {
-            try
+            if (File.Exists(fileName))
             {
-                Stream stream = File.Open(fileName, FileMode.Create);
-                BinaryFormatter bin = new BinaryFormatter();
-                bin.Serialize(stream, apiario);
-                stream.Close();   
-                return true;
+                try
+                {
+                    Stream stream = File.Open(fileName, FileMode.Create);
+                    BinaryFormatter bin = new BinaryFormatter();
+                    bin.Serialize(stream, apiario);
+                    stream.Close();
+                    return true;
+                }
+                catch (IOException e)
+                {
+                    throw e;
+                }
             }
-            catch (IOException e)
-            {
-                //Console.Write("ERRO:" + e.Message);
-                return false;
-            }
+            return false;
         }
 
         /// <summary>
@@ -110,7 +117,7 @@ namespace FilesAndFolders
             catch (IOException e)
             {
                 //Console.Write("ERRO:" + e.Message);
-                return false;
+                throw e;
             }
         }
 
@@ -140,7 +147,7 @@ namespace FilesAndFolders
                 catch (IOException e)
                 {
                     //Console.Write("ERRO:" + e.Message);
-                    return false;
+                    throw e;
                 }
             }
             return false;
@@ -222,7 +229,7 @@ namespace FilesAndFolders
         {
             try
             {
-                Stream stream = File.Open(fileName, FileMode.Create);
+                Stream stream = File.Open(fileName, FileMode.OpenOrCreate);
                 BinaryFormatter bin = new BinaryFormatter();
                 bin.Serialize(stream, fnap);
                 stream.Close();
@@ -346,6 +353,7 @@ namespace FilesAndFolders
         public Pessoa(int i)
         {
             idade = i;
+            perfil = idade * 2;
         }
 
         public override string ToString()
@@ -355,14 +363,17 @@ namespace FilesAndFolders
 
     }
 
-    [Serializable]
+   [Serializable]
     public class Pessoas
     {
         public Hashtable dados = new Hashtable();
+        /// <summary>
+        ///  Write the binary data to a file
+        /// </summary>
+        /// <param name="fileName"></param>
+        /// <returns></returns>
         public bool Save(string fileName)
         {
-            // write the data to a file
-            var binformatter = new BinaryFormatter();
             try
             {
                 Stream s = File.Open(fileName, FileMode.Create, FileAccess.ReadWrite);
@@ -374,21 +385,28 @@ namespace FilesAndFolders
             }
             catch(Exception e)
             {
-                Console.WriteLine(e.Message);
+                throw; //algo se passou
             }
             return true;
         }
 
         public bool Load(string fileName)
         {
-            //Hashtable aux = null;
-            Stream s = File.Open(fileName, FileMode.Open, FileAccess.Read);
-            BinaryFormatter b = new BinaryFormatter();
-            dados = (Hashtable)b.Deserialize(s);
-            s.Flush();
-            s.Close();
-            s.Dispose();
-            return true;
+            try
+            {
+                //Hashtable aux = null;
+                Stream s = File.Open(fileName, FileMode.Open, FileAccess.Read);
+                BinaryFormatter b = new BinaryFormatter();
+                dados = (Hashtable)b.Deserialize(s);
+                s.Flush();
+                s.Close();
+                s.Dispose();
+                return true;
+            }
+            catch
+            {
+                throw new Exception("Erro");
+            }
         }
 
         public bool InsertPerson(Pessoa p)
@@ -427,7 +445,7 @@ namespace FilesAndFolders
             foreach (object i in dados.Keys)
             {
 
-                ((Pessoa)(dados[i])).perfil = ((Pessoa)(dados[i])).idade * 2;
+                ((Pessoa)dados[i]).perfil = ((Pessoa)dados[i]).idade * 2;
             }
             return true;
         }

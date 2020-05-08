@@ -35,14 +35,11 @@ namespace Collections
     /// </summary>
     class MyComparer : IComparer
     {
-
          private SortDirecc dir;        //Asc, Desc
-
          public MyComparer()
          {
              dir = SortDirecc.Asc;             
          }
-
         public MyComparer(SortDirecc dir)
         {
             this.dir = dir;
@@ -126,5 +123,8 @@ namespace Collections
 
             return -1;
         }
+
+        
     }
+    
 }

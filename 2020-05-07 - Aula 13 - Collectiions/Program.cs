@@ -194,6 +194,8 @@ namespace Collections
             n.Add(12);
             n.Add(24);
             n.Add(7);
+            n.Sort();
+
             n.Add("ola");
 
             //n.Add(new Pessoa());

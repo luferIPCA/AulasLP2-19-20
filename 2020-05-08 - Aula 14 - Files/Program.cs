@@ -120,7 +120,10 @@ namespace FilesAndFolders
 
             //limpa Hashtable
             p.dados.Clear();
+            p.Show();
             p.Load(@"c:\temp\hashData.bin");
+            p.Show();
+            Console.ReadKey();
             p.SetHashFields();
             p.Show();
 
