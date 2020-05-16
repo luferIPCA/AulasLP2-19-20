@@ -4,16 +4,17 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>{028B7692-355D-4B3F-9815-A811B2918FB0}</ProjectGuid>
-    <OutputType>Library</OutputType>
-    <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>Dados</RootNamespace>
-    <AssemblyName>Dados</AssemblyName>
+    <ProjectGuid>{F07A5802-0E69-4252-A885-B5AAF72C6B27}</ProjectGuid>
+    <OutputType>Exe</OutputType>
+    <RootNamespace>_2020_05_15___Aula_18___MVC_I</RootNamespace>
+    <AssemblyName>2020-05-15 - Aula 18 - MVC_I</AssemblyName>
     <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
     <Deterministic>true</Deterministic>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
     <DebugSymbols>true</DebugSymbols>
     <DebugType>full</DebugType>
     <Optimize>false</Optimize>
@@ -23,6 +24,7 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
     <DebugType>pdbonly</DebugType>
     <Optimize>true</Optimize>
     <OutputPath>bin\Release\</OutputPath>
@@ -41,19 +43,15 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Pessoa.cs" />
-    <Compile Include="Pessoas.cs" />
+    <Compile Include="View\Display.cs" />
+    <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Model\Gorjeta.cs" />
+    <Compile Include="Controller\TipCalculatorController.cs" />
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\Excepcoes\Excepcoes.csproj">
-      <Project>{893fd776-9b08-40b4-9789-61f3c5d743b1}</Project>
-      <Name>Excepcoes</Name>
-    </ProjectReference>
-    <ProjectReference Include="..\ObjetosNegocio\ObjetosNegocio.csproj">
-      <Project>{753b479a-0623-447c-8709-e72f43e0d170}</Project>
-      <Name>ObjetosNegocio</Name>
-    </ProjectReference>
+    <None Include="App.config" />
+    <None Include="ClassDiagram1.cd" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

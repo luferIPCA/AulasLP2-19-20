@@ -1,29 +1,30 @@
 ﻿/*
-*	<copyright file="Clubecs.cs" company="IPCA">
+*	<copyright file="Pessoa.cs" company="IPCA">
 *		Copyright (c) 2020 All Rights Reserved
 *	</copyright>
 * 	<author>lufer</author>
-*   <date>5/14/2020 7:47:57 PM</date>
+*   <date>5/15/2020 2:25:22 PM</date>
 *	<description></description>
 **/
-
 using System;
 using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using ObjetosNegocio;
 
-namespace ClubeBO
+namespace Dados
 {
     /// <summary>
     /// Purpose:
     /// Created by: lufer
-    /// Created on: 5/14/2020 7:47:57 PM
+    /// Created on: 5/15/2020 2:25:22 PM
     /// </summary>
     /// <remarks></remarks>
     /// <example></example>
-    public class Clube
+    public class Pessoa : PessoaSemLista
     {
         #region Attributes
-        public string nome;
-
+        public List<A> conjA;
         #endregion
 
         #region Methods
@@ -33,14 +34,15 @@ namespace ClubeBO
         /// <summary>
         /// The default Constructor.
         /// </summary>
-        public Clube()
+        public Pessoa()
         {
+            conjA = new List<A>();
         }
 
-
-        public Clube(string n)
+        public Pessoa(A a)
         {
-            nome = n;
+            conjA = new List<A>();
+            conjA.Add(a);
         }
 
         #endregion
@@ -49,6 +51,13 @@ namespace ClubeBO
         #endregion
 
         #region Functions
+
+        bool AddA(A a)
+        {
+            //testar
+            conjA.Add(a);
+            return true;
+        }
         #endregion
 
         #region Overrides
@@ -58,7 +67,7 @@ namespace ClubeBO
         /// <summary>
         /// The destructor.
         /// </summary>
-        ~Clube()
+        ~Pessoa()
         {
         }
         #endregion

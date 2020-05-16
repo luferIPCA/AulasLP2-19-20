@@ -43,6 +43,10 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "2020-05-08 - Aula 15 - Gene
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "2020-05-08 - Aula 15 - Generics II", "2020-05-08 - Aula 15 - Generics II\2020-05-08 - Aula 15 - Generics II.csproj", "{C87B94B4-DE3F-4D9B-82CD-FC49354916DA}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "2020-05-15 - Aula 18 - MVC_I", "2020-05-15 - Aula 18 - MVC_I\2020-05-15 - Aula 18 - MVC_I.csproj", "{F07A5802-0E69-4252-A885-B5AAF72C6B27}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "2020-05-15 - Aula 18 - MVC_II", "2020-05-15 - Aula 18 - MVC_II\2020-05-15 - Aula 18 - MVC_II.csproj", "{F10A19C6-A2B5-4DD8-BA4E-97940126D16D}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -129,6 +133,14 @@ Global
 		{C87B94B4-DE3F-4D9B-82CD-FC49354916DA}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{C87B94B4-DE3F-4D9B-82CD-FC49354916DA}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{C87B94B4-DE3F-4D9B-82CD-FC49354916DA}.Release|Any CPU.Build.0 = Release|Any CPU
+		{F07A5802-0E69-4252-A885-B5AAF72C6B27}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{F07A5802-0E69-4252-A885-B5AAF72C6B27}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{F07A5802-0E69-4252-A885-B5AAF72C6B27}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{F07A5802-0E69-4252-A885-B5AAF72C6B27}.Release|Any CPU.Build.0 = Release|Any CPU
+		{F10A19C6-A2B5-4DD8-BA4E-97940126D16D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{F10A19C6-A2B5-4DD8-BA4E-97940126D16D}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{F10A19C6-A2B5-4DD8-BA4E-97940126D16D}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{F10A19C6-A2B5-4DD8-BA4E-97940126D16D}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

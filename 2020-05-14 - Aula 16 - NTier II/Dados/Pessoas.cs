@@ -23,18 +23,65 @@ namespace Dados
         /// </summary>
         /// <param name="p"></param>
         /// <returns></returns>
-        public static bool AddPessoa(Pessoa p)
+        public static bool AddPessoa(PessoaSemLista p)
         {
             try
             {
-                if (todasPessoas.Contains(p)) return false;
-                todasPessoas.Add(p);
+                //PessoaSemLista em Pessoa;
+                Pessoa aux = new Pessoa();
+                aux.nome = p.nome;
+                aux.conjA = null;
+
+                if (todasPessoas.Contains(aux)) return false;   //Rever Contains que percorre pelo "nome"
+                
+                todasPessoas.Add(aux);
             }
             catch (InsercaoException e)
             {
                 throw e;
             }
             return true;
+        }
+
+
+        public static bool AddPessoa(PessoaSemLista p, A a)
+        {
+            try
+            {
+                //PessoaSemLista em Pessoa;
+                Pessoa aux = new Pessoa(a);
+                aux.nome = p.nome;
+
+                if (todasPessoas.Contains(aux)) return false;   //Rever Contains que percorre pelo "nome"
+
+                todasPessoas.Add(aux);
+            }
+            catch (InsercaoException e)
+            {
+                throw e;
+            }
+            return true;
+        }
+
+        public static bool AddA(string nome, A a)
+        {
+            try
+            {
+                foreach(Pessoa p in todasPessoas)
+                {
+                    if (p.nome == nome)
+                    {
+                        //testar
+                        p.conjA.Add(a);
+                        return true;
+                    }
+                }
+            }
+            catch (InsercaoException e)
+            {
+                throw e;
+            }
+            return false;
         }
 
         public static Pessoa GetPessoa(int p)

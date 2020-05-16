@@ -25,6 +25,8 @@ namespace GereClubes
 
             try
             {
+                RegrasClubes.InsereCampeonatoClube(DateTime.Today, "benfica");
+
                 if (RegrasClubes.InsereClube(c) == true)
                     Console.WriteLine("Nome:" + c.nome);
                 else

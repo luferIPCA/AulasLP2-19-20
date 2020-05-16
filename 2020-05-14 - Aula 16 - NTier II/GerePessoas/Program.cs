@@ -13,6 +13,7 @@ using System;
 using ObjetosNegocio;   //Camada de Objetos de negócio
 using RegrasNegocio;
 using Excepcoes;
+using System.Collections.Generic;
 
 namespace GerePessoas
 {
@@ -23,13 +24,19 @@ namespace GerePessoas
             bool aux;
 
             Console.WriteLine("Gerir Pessoas");
-            Pessoa p1 = new Pessoa("Um Nome");
-
+            PessoaSemLista p1 = new PessoaSemLista("Um Nome");
             //Pessoas.Add(p1);  //evitar aceder diretamente aos dados!!!
+
+            A a = new A();
+
 
             try
             {
-                aux = Regras.InserePessoa(p1, 3);
+                aux = Regras.InserePessoaA(p1, a);
+
+                //aux = Regras.InsereA(p1.nome, a);
+                //Regras.InserePessoa(p1, 3);
+
                 if (aux == true)
                     Console.WriteLine("Inserido: Nome: " + p1.nome);
                 else

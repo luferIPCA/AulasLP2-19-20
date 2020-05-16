@@ -7,6 +7,9 @@
 *	<description> Business Objects </description>
 **/
 
+using System;
+using System.Collections.Generic;
+
 namespace ObjetosNegocio
 {
     /// <summary>
@@ -16,10 +19,11 @@ namespace ObjetosNegocio
     /// </summary>
     /// <remarks></remarks>
     /// <example></example>
-    public class Pessoa
+    public class PessoaSemLista
     {
         #region Attributes
         public string nome;
+
         #endregion
 
         #region Methods
@@ -59,5 +63,11 @@ namespace ObjetosNegocio
         #endregion
 
         #endregion
+    }
+
+    public class A
+    {
+        string x;
+        string y;
     }
 }

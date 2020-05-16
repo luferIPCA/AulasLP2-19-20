@@ -8,6 +8,8 @@
 **/
 using ClubeBO;
 using DadosClubes;
+using System;
+using System.Runtime.InteropServices.WindowsRuntime;
 using Validacoes;
 
 namespace ClubesRN
@@ -32,6 +34,19 @@ namespace ClubesRN
                 return Clubes.AddClube(c);
             }
             catch(InsertException e)
+            {
+                throw e;
+            }
+        }
+
+        public static bool InsereCampeonatoClube(DateTime c, string n)
+        {
+            try
+            {
+                //aplica regras de negocio
+                return Clubes.AddCampeonatoClube(c, n);
+            }
+            catch (InsertException e)
             {
                 throw e;
             }

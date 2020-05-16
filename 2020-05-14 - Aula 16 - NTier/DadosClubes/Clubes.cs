@@ -14,11 +14,12 @@ namespace DadosClubes
 {
     public class Clubes
     {
-        private static List<Clube> allClubes;
+        //
+        private static List<ClubeCompleto> allClubes;
 
         static Clubes()
         {
-            allClubes = new List<Clube>();
+            allClubes = new List<ClubeCompleto>();
         }
 
         /// <summary>
@@ -28,9 +29,35 @@ namespace DadosClubes
         /// <returns></returns>
         public static bool AddClube(Clube c)
         {
-            if (allClubes.Contains(c)) return false;
-            allClubes.Add(c);
+            //Converter Clube em ClubeCompleto
+            //ClubeCompleto cp = (ClubeCompleto)c;
+
+            ClubeCompleto cp = new ClubeCompleto(c);
+            //if (allClubes.Contains(c)) return false;
+            //ou
+            //foreach (ClubeCompleto cpi in allClubes)
+            //{
+            //    if (cpi.c.nome == c.nome)
+            //    {
+            //        return false;
+            //    }
+            //}
+
+            allClubes.Add(cp);
             return true;
+        }
+
+
+        public static bool AddCampeonatoClube(DateTime c, string n)
+        {
+            foreach (ClubeCompleto cp in allClubes)
+            {
+                if (cp.c.nome == n)
+                {
+                    cp.AddCampeonato(c); return true;
+                }
+            }
+            return false;
         }
 
 
@@ -43,5 +70,66 @@ namespace DadosClubes
         {
             return true;
         }
+
+
+        public Clube GetClubeEssential(string n)
+        {
+            foreach(ClubeCompleto cp in allClubes)
+            {
+                if (cp.c.nome == n)
+                {
+                    return (cp.c);
+                }
+            }
+            return null;
+        }
+
+        public List<DateTime> GetClubeHist(string n)
+        {
+            foreach (ClubeCompleto cp in allClubes)
+            {
+                if (cp.c.nome == n)
+                {
+                    return (cp.datasCampeonatos);
+                }
+            }
+            return null;
+        }
+
+
+    }
+
+
+    /// <summary>
+    /// 
+    /// </summary>
+    class ClubeCompleto
+    {
+        public Clube c;
+        public List<DateTime> datasCampeonatos;
+
+        public ClubeCompleto(Clube c)
+        {
+            this.c = c;
+            datasCampeonatos = new List<DateTime>();
+        }
+
+        public ClubeCompleto(Clube c, DateTime cp)
+        {
+            this.c = c;
+            datasCampeonatos = new List<DateTime>();
+            datasCampeonatos.Add(cp);
+        }
+
+
+        public bool AddCampeonato(DateTime d)
+        {
+            //testar
+            datasCampeonatos.Add(d);
+            return true;
+        }
+
+       
+
     }
 }
