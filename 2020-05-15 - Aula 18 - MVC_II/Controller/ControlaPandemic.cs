@@ -17,7 +17,6 @@ namespace MVC_II.Controller
         
         //controlar Model
         void SetModel(IIndicadoresModel m);
-        void SetModel(IIndicadoresHistory m);
         void MoreDeads(int v);
         void MoreInfected(int v);
         void MoreRecovered(int v);
@@ -46,7 +45,7 @@ namespace MVC_II.Controller
     {
         private IIndicadoresModel ind;
         private IIndicadoresView indView;
-        private IIndicadoresHistory indHist; 
+        
 
         //construtor
         #region Construtors
@@ -114,42 +113,6 @@ namespace MVC_II.Controller
         {
             return ind.Recuperados;
         }
-        #endregion
-
-        #region IndicadoresHistory
-
-        public void SetModel(IIndicadoresHistory m)
-        {
-            this.indHist = m;
-        }
-
-        public void NewIndicator(Indicadores i)
-        {
-            if (indHist != null)
-            {
-                //testar de não existe
-                indHist.AddIndicador(i);
-            }
-        }
-
-        public bool SaveHistory(string s)
-        {
-            if (indHist != null)
-            {
-                return indHist.SaveHistory(s);
-            }
-            return false;
-        }
-
-        public bool LoadHistory(string s)
-        {
-            if (indHist != null)
-            {
-                return indHist.LoadHistory(s);
-            }
-            return false;
-        }
-
         #endregion
 
         #endregion

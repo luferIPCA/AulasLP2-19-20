@@ -4,13 +4,12 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>{F10A19C6-A2B5-4DD8-BA4E-97940126D16D}</ProjectGuid>
+    <ProjectGuid>{98D5A677-6FE7-4B64-882B-7C25E210A9A5}</ProjectGuid>
     <OutputType>Exe</OutputType>
-    <RootNamespace>_2020_05_15___Aula_18___MVC_II</RootNamespace>
-    <AssemblyName>2020-05-15 - Aula 18 - MVC_II</AssemblyName>
-    <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
+    <RootNamespace>Aula_14___LINQ</RootNamespace>
+    <AssemblyName>Aula 14 - LINQ</AssemblyName>
+    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
-    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
     <Deterministic>true</Deterministic>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
@@ -43,17 +42,11 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Controller\ControlaPandemic.cs" />
-    <Compile Include="Controller\ControlHistory.cs" />
-    <Compile Include="Model\Indicadores.cs" />
-    <Compile Include="Model\IndicadoresHistory.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="View\IndicadoresView.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
   </ItemGroup>
-  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

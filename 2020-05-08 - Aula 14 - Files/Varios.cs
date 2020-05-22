@@ -277,7 +277,7 @@ namespace FilesAndFolders
         /// <returns></returns>
         public static bool LoadApicultura(string fileName)
         {
-            if (File.Exists(fileName))
+            if (File.Exists(fileName) && (new FileInfo(fileName).Length>0))
             {
                 try
                 {
