@@ -1,4 +1,9 @@
-﻿using System;
+﻿/*
+ * lufer
+ * LP2
+ * LINQ
+ * */
+using System;
 using System.Collections.Generic;
 using System.Linq;
 
@@ -14,24 +19,21 @@ namespace LINQ
         {
             #region Lambda Functions
 
-            //Func<input,outpu>
+            //Func<input,output>
             Func<int, int> square = x => x * x;
             Console.WriteLine(square(5));
 
 
             string message1 = "O Benfica é o maior...";
             string message2 = "O Portinho é quase....";
-            Action<string, string> concat;
-
-            concat = WriteToConsole;
+            //Action<string, string> concat;
+            Action<string, string> concat = new Action<string, string>(WriteToConsole);
+            //ou
+            //concat = WriteToConsole;
 
             concat(message1, message2);
 
-            #endregion
-
-            #region Lambda Functions
-
-            //Lambda & Delegates
+            //Lambda
             Func<int, string, bool> isTooLong = (int x, string s) => s.Length > x;
 
             Console.WriteLine("'Olamundo' tem mais que 12 caracteres? " + isTooLong(12, "Olamundo"));
@@ -106,11 +108,11 @@ namespace LINQ
 
             //Compreensão
             var students =  from s in studentList
-                            where s.Age > 20
+                            where (s.Age < 20 && s.Age>12)
                             select s;
 
             //Lambda
-            var students1 = studentList.Where(s => s.Age > 20).ToList<Student>();
+            var students1 = studentList.Where(s => (s.Age < 20 && s.Age>12)).ToList<Student>();
 
             //Usa Delegate
             var students2 = from s in studentList
@@ -145,8 +147,9 @@ namespace LINQ
             var studentsInAscOrder = studentList.OrderBy(s => s.Name);
 
             var orderByResult2 = from s in studentList
-                                orderby s.Name, s.Age
-                                select new { s.Name, s.Age };
+                                 where s.Age<20
+                                 orderby s.Name, s.Age
+                                 select new { s.Name, s.Age };
 
             //All
             bool areAllStudentsTeenAger = studentList.All(s => s.Age > 12 && s.Age < 20);

@@ -207,7 +207,10 @@ namespace Delegates
            
     }
 
-        
+        private static void MyClass_Log(string message)
+        {
+            throw new NotImplementedException();
+        }
 
         static void c_ThresholdReached(Object sender, ThresholdReachedEventArgs e)
         {
